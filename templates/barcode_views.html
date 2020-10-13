@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for barcode in BarCode %}
+<div class="card">
+  <img class="card-img-top" src="{{ barcode.barcode.url }}" alt="Card image cap" style="height:400px; width:400px;">
+
+  <div class="card-body">
+    <h1 class="card-title"><a>{{ barcode.SiteName }}</a></h1>
+  </div>
+</div>
+<br>
+<br>
+<br>
+{% endfor %}
+{% endblock content %}
